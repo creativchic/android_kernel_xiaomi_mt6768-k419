@@ -245,7 +245,6 @@ config ANDROID_DEFAULT_SETTING
 	select QUOTA
 	select QUOTACTL
 	select RTC_CLASS
-	select SCHED_DEBUG
 	select SECCOMP
 	select SECCOMP_FILTER
 	select SECURITY
@@ -273,6 +272,7 @@ config ANDROID_DEFAULT_SETTING
 	select TASKSTATS
 	select TASK_XACCT
 	select TIMERFD
+	select TRACEPOINTS
 	select TTY
 	select TUN
 	select UCLAMP_TASK
