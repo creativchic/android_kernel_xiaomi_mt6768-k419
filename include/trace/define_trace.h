@@ -92,9 +92,11 @@
 #undef DECLARE_TRACE
 #define DECLARE_TRACE(name, proto, args)
 
-#ifdef TRACEPOINTS_ENABLED
+#if defined(TRACEPOINTS_ENABLED) && defined(CONFIG_EVENT_TRACING)
 #include <trace/trace_events.h>
 #include <trace/perf.h>
+#endif
+#if defined(TRACEPOINTS_ENABLED) && defined(CONFIG_BPF_EVENTS)
 #include <trace/bpf_probe.h>
 #endif
 
